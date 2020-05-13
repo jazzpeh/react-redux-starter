@@ -1,4 +1,5 @@
 import App from './App/App';
-import ConnectedCounter from './Counter/Counter';
+import ConnectedCounterRedux from './CounterRedux/CounterRedux';
+import CounterState from './CounterState/CounterState';
 
-export { App, ConnectedCounter as Counter };
+export { App, CounterState, ConnectedCounterRedux as CounterRedux };

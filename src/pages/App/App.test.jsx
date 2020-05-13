@@ -13,8 +13,13 @@ describe('App', () => {
     expect(wrapper).toBeTruthy();
   });
 
-  it('should show the correct link to counter page', () => {
-    const link = wrapper.findByTestId('link');
-    expect(link.prop('to')).toEqual('/counter');
+  it('should show the correct link to counter redux page', () => {
+    const link = wrapper.findByTestId('redux');
+    expect(link.prop('to')).toEqual('/counter/redux');
+  });
+
+  it('should show the correct link to counter state page', () => {
+    const link = wrapper.findByTestId('state');
+    expect(link.prop('to')).toEqual('/counter/state');
   });
 });

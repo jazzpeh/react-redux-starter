@@ -1,12 +1,13 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
-		"airbnb",
-		"plugin:prettier/recommended"
+    "airbnb",
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -14,17 +15,21 @@
   },
   "parserOptions": {
     "ecmaFeatures": {
-			"jsx": true
+      "jsx": true
     },
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "rules": {
-		"react/jsx-filename-extension": [1, {
-			"extensions": [".js", ".jsx"]}
-		]
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": [0],
+    "react/forbid-prop-types": [0],
+    "react/jsx-props-no-spreading": [0]
   }
 }

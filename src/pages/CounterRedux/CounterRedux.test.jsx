@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Counter } from './Counter';
+import { CounterRedux } from './CounterRedux';
 
-describe('Counter', () => {
+describe('CounterRedux', () => {
   let wrapper;
   let props;
 
@@ -13,7 +13,7 @@ describe('Counter', () => {
       onDecrementCounter: jest.fn(),
     };
 
-    wrapper = shallow(<Counter {...props} />);
+    wrapper = shallow(<CounterRedux {...props} />);
   });
 
   it('should render without errors', () => {

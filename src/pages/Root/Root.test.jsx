@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 
 import Root from './Root';
-import { App, Counter } from '..';
+import { App, CounterState, CounterRedux } from '..';
 
 describe('Root', () => {
   const initialState = { counter: { value: 0 } };
@@ -24,8 +24,13 @@ describe('Root', () => {
     expect(wrapper.find(App)).toHaveLength(1);
   });
 
-  it('should render `Counter` page at `/counter` path', () => {
-    const wrapper = mount(router('/counter'));
-    expect(wrapper.find(Counter)).toHaveLength(1);
+  it('should render `CounterRedux` page at `/counter/redux` path', () => {
+    const wrapper = mount(router('/counter/redux'));
+    expect(wrapper.find(CounterRedux)).toHaveLength(1);
+  });
+
+  it('should render `CounterState` page at `/counter/state` path', () => {
+    const wrapper = mount(router('/counter/state'));
+    expect(wrapper.find(CounterState)).toHaveLength(1);
   });
 });

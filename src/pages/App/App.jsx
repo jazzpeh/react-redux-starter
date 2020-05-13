@@ -48,7 +48,9 @@ const App = () => {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Link to="/counter">View sample redux counter page</Link>
+        <Link to="/counter" data-testid="link">
+          View sample redux counter page
+        </Link>
       </AppHeader>
     </AppWrapper>
   );

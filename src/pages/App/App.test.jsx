@@ -17,7 +17,7 @@ describe('App', () => {
   });
 
   it('should show the correct link to counter page', () => {
-    const link = wrapper.find('Styled(NavLink)');
+    const link = wrapper.find('[data-testid="link"]');
     expect(link.prop('to')).toEqual('/counter');
   });
 });

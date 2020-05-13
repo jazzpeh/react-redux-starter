@@ -1,9 +1,6 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import App from './App';
-
-Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('App', () => {
   let wrapper;
@@ -17,7 +14,7 @@ describe('App', () => {
   });
 
   it('should show the correct link to counter page', () => {
-    const link = wrapper.find('[data-testid="link"]');
+    const link = wrapper.findByTestId('link');
     expect(link.prop('to')).toEqual('/counter');
   });
 });

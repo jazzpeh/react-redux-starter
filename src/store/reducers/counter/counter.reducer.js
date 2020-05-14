@@ -1,4 +1,4 @@
-import { CounterActionTypes } from '../actions/counter';
+import { CounterActionTypes } from '../../actions/counter';
 
 const initialState = {
   value: 0,

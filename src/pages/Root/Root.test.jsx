@@ -7,7 +7,7 @@ import Root from './Root';
 import { App, CounterState, CounterRedux } from '..';
 
 describe('Root', () => {
-  const initialState = { counter: { value: 0 } };
+  const initialState = { counter: { value: 0 }, ui: { isLoading: false } };
   const mockStore = configureStore();
   let router = null;
 

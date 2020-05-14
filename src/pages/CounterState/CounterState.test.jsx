@@ -31,4 +31,9 @@ describe('Counter', () => {
     wrapper.findByTestId('counter').props().onClickDecrement();
     expect(wrapper.state('counter')).toEqual(counter - 1);
   });
+
+  it('should render the correct link to home page', () => {
+    const link = wrapper.findByTestId('home');
+    expect(link.prop('to')).toEqual('/');
+  });
 });

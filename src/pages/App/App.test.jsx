@@ -13,12 +13,12 @@ describe('App', () => {
     expect(wrapper).toBeTruthy();
   });
 
-  it('should show the correct link to counter redux page', () => {
+  it('should render the correct link to counter redux page', () => {
     const link = wrapper.findByTestId('redux');
     expect(link.prop('to')).toEqual('/counter/redux');
   });
 
-  it('should show the correct link to counter state page', () => {
+  it('should render the correct link to counter state page', () => {
     const link = wrapper.findByTestId('state');
     expect(link.prop('to')).toEqual('/counter/state');
   });
